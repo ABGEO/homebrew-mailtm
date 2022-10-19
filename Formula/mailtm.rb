@@ -5,21 +5,21 @@
 class Mailtm < Formula
   desc "CLI client for Mail.tm disposable mail service"
   homepage "https://github.com/ABGEO/mailtm"
-  version "0.3.0"
+  version "0.3.1"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.0/mailtm_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "08560855ba98f29a572112a0c6121d1df54b1451ec31dd194f3d91d9d483dd0b"
+    if Hardware::CPU.intel?
+      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.1/mailtm_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "989ef27e8796768ecce629c261b6fcc8ad46c61092f4a05ffbb5bcc0be7ff398"
 
       def install
         bin.install "mailtm"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.0/mailtm_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "faea741bac324298b0e5b8d3626a1478090a53cd9ee6a3e95ef0644795ba2fc9"
+    if Hardware::CPU.arm?
+      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.1/mailtm_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "e2ec9d75d647c8194e165130b44f34e209828be1764967fd5ad6bcbcf0e8c4d0"
 
       def install
         bin.install "mailtm"
@@ -29,16 +29,16 @@ class Mailtm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.0/mailtm_0.3.0_Linux_arm64.tar.gz"
-      sha256 "5f1f902846eb060573c13920cd1d80e2e4d376d794d77f7330dfd67bab786eeb"
+      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.1/mailtm_0.3.1_Linux_arm64.tar.gz"
+      sha256 "e0ac053bf3c6e581b97120fa76d3e79bbfd9e27511201877e4ad0d168f92c000"
 
       def install
         bin.install "mailtm"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.0/mailtm_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "25b70d76f3842335f097315349c9e8b14c366861669ba90a34d055b8180359ef"
+      url "https://github.com/ABGEO/mailtm/releases/download/v0.3.1/mailtm_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "bddad5b6e6aeab6d7dc53f661f38ed1ae5a736bab97a91e01f8a470e10e8bcd7"
 
       def install
         bin.install "mailtm"
